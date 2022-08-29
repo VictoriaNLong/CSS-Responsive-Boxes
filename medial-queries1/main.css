@@ -1,3 +1,46 @@
 body {
   background: blanchedalmond;
 }
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  justify-content: space-around;
+}
+
+.container > * {
+  border: 1px solid black;
+}
+
+.a {
+  width: 100%;
+}
+
+.b {
+  width: 84%;
+  height: 100px;
+}
+
+.c {
+  width: 15%;
+  height: 100px
+}
+
+@media (max-width: 600px) {
+  .container{
+  flex-direction: column;
+  }
+
+  .container > * {
+    width: 100%;
+  }
+
+  .b {
+    height: 200px;
+  }
+
+  .c {
+    height: 50px;
+  }
+}
